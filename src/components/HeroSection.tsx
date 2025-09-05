@@ -27,14 +27,15 @@ const HeroSection = () => {
 
         {/* Bouton de téléchargement */}
         <div className="animate-slide-up">
-          <Button 
-            size="lg" 
-            className="bg-gradient-warm text-primary-foreground font-semibold px-8 py-4 text-lg shadow-warm hover:shadow-glow transition-all duration-300 hover:scale-105 group"
+          <a 
+            href="/nomore-app.apk" 
+            download="NoMore-App.apk"
+            className="inline-flex items-center justify-center bg-gradient-warm text-primary-foreground font-semibold px-8 py-4 text-lg shadow-warm hover:shadow-glow transition-all duration-300 hover:scale-105 group rounded-lg"
           >
             <Smartphone className="w-6 h-6 mr-3 group-hover:animate-pulse" />
             Télécharger sur Android
             <Download className="w-5 h-5 ml-2" />
-          </Button>
+          </a>
         </div>
 
         {/* Badge de confiance */}
