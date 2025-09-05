@@ -28,8 +28,8 @@ const HeroSection = () => {
         {/* Bouton de téléchargement */}
         <div className="animate-slide-up">
           <a 
-            href="/NoMore-App.apk" 
-            download="NoMore-App.apk"
+            href="/downloads/NoMore-App.apk" 
+            download="/downloads/NoMore-App.apk"
             className="inline-flex items-center justify-center bg-gradient-warm text-primary-foreground font-semibold px-8 py-4 text-lg shadow-warm hover:shadow-glow transition-all duration-300 hover:scale-105 group rounded-lg"
           >
             <Smartphone className="w-6 h-6 mr-3 group-hover:animate-pulse" />
