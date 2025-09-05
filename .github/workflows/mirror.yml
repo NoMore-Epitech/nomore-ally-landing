@@ -1,0 +1,61 @@
+name: Mirror
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    name: mirror
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT }}
+          
+      - name: Setup git and mirror to private repository
+        env:
+          PAT_TOKEN: ${{ secrets.PAT }}
+        run: |
+          # Configure git safe directories
+          git config --global --add safe.directory /github/workspace
+          git config --global --add safe.directory '*'
+          
+          # Configure git user
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+          # Remove existing remote if it exists
+          git remote remove target-repo 2>/dev/null || true
+          
+          # Add the target repository as a remote with PAT authentication
+          git remote add target-repo "https://x-access-token:${PAT_TOKEN}@github.com/badidu09/nomoreappdownload.git"
+          
+          # Test the connection
+          echo "Testing connection to target repository..."
+          git ls-remote target-repo || {
+            echo "Failed to connect to target repository. Check PAT permissions."
+            exit 1
+          }
+          
+          # Fetch all branches and tags
+          echo "Fetching all branches and tags..."
+          git fetch --all
+          
+          # Push all branches and tags to mirror the repository
+          echo "Pushing all branches to target repository..."
+          git push -f target-repo --all || {
+            echo "Failed to push branches. Check repository permissions."
+            exit 1
+          }
+          
+          echo "Pushing all tags to target repository..."
+          git push -f target-repo --tags || {
+            echo "Failed to push tags. Check repository permissions."
+            exit 1
+          }
+          
+          echo "Mirroring completed successfully!"
