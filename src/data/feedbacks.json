@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Marie Dupont",
+    "email": "marie.dupont@example.com",
+    "type": "bug",
+    "message": "L'application se ferme quand j'essaie d'ajouter un objectif quotidien. Cela arrive systématiquement sur mon Samsung Galaxy S21.",
+    "date": "2024-01-15T10:30:00Z",
+    "status": "new"
+  },
+  {
+    "id": 2,
+    "name": "Pierre Martin",
+    "email": "p.martin@gmail.com",
+    "type": "feature",
+    "message": "Serait-il possible d'ajouter des notifications personnalisables pour les moments difficiles ? Par exemple, des messages de motivation à des heures précises.",
+    "date": "2024-01-14T14:22:00Z",
+    "status": "in-progress"
+  },
+  {
+    "id": 3,
+    "name": "Sophie Lemoine",
+    "email": "sophie.lemoine@outlook.fr",
+    "type": "general",
+    "message": "Application vraiment utile ! J'ai réussi à tenir 3 semaines sans cigarette grâce aux statistiques motivantes. Continuez comme ça !",
+    "date": "2024-01-13T09:15:00Z",
+    "status": "resolved"
+  },
+  {
+    "id": 4,
+    "name": "Thomas Rousseau",
+    "email": "thomas.r@yahoo.fr",
+    "type": "improvement",
+    "message": "L'interface est un peu lente sur les anciens téléphones. Peut-être optimiser les animations pour améliorer les performances ?",
+    "date": "2024-01-12T16:45:00Z",
+    "status": "new"
+  },
+  {
+    "id": 5,
+    "name": "Camille Berger",
+    "email": "camille.berger@free.fr",
+    "type": "ui",
+    "message": "Le bouton de sauvegarde n'est pas très visible en mode sombre. Il serait bien de le rendre plus contrasté.",
+    "date": "2024-01-11T11:20:00Z",
+    "status": "resolved"
+  }
+]
