@@ -8,35 +8,45 @@ const HeroSection = () => {
         {/* Slogan principal */}
         <div className="animate-fade-in">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-inter text-foreground mb-6 leading-tight">
-            Ton allié dans la lutte<br />
+            Ton allié dans la lutte
+            <br />
             <span className="bg-gradient-warm bg-clip-text text-transparent">
               contre les addictions
             </span>
           </h2>
         </div>
-        
+
         {/* Description */}
         <div className="animate-slide-up">
           <p className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-            NoMore t'accompagne au quotidien avec bienveillance et efficacité dans ton parcours vers la liberté.
+            NoMore t'accompagne au quotidien avec bienveillance et efficacité
+            dans ton parcours vers la liberté.
           </p>
           <p className="text-base sm:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Reprends le contrôle de ta vie grâce à des outils personnalisés et un soutien constant.
+            Reprends le contrôle de ta vie grâce à des outils personnalisés et
+            un soutien constant.
           </p>
         </div>
 
         {/* Bouton de téléchargement */}
         <div className="animate-slide-up">
           <a
-            href="https://github.com/NoMore-Epitech/nomore-ally-landing/releases/latest"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="https://github.com/NoMore-Epitech/nomore-ally-landing/releases/latest/download/NoMore-App.apk"
             className="inline-flex items-center justify-center bg-gradient-warm text-primary-foreground font-semibold px-8 py-4 text-lg shadow-warm hover:shadow-glow transition-all duration-300 hover:scale-105 group rounded-lg"
           >
-            <Smartphone className="w-6 h-6 mr-3 group-hover:animate-pulse" />
             Télécharger sur Android
-            <Download className="w-5 h-5 ml-2" />
           </a>
+
+          <p className="text-sm text-muted-foreground mt-3">
+            Si le téléchargement ne démarre pas,{" "}
+            <a
+              href="https://github.com/NoMore-Epitech/nomore-ally-landing/releases/latest"
+              className="underline"
+            >
+              ouvre la page de release
+            </a>{" "}
+            et clique sur l’asset APK.
+          </p>
         </div>
 
         {/* Badge de confiance */}
