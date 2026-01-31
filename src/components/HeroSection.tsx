@@ -28,7 +28,7 @@ const HeroSection = () => {
         {/* Bouton de téléchargement */}
         <div className="animate-slide-up">
           <a
-            href="https://github.com/NoMore-Epitech/nomore-ally-landing/releases/latest/download/NoMore-App.apk"
+            href="https://github.com/NoMore-Epitech/nomore-ally-landing/releases/latest"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-gradient-warm text-primary-foreground font-semibold px-8 py-4 text-lg shadow-warm hover:shadow-glow transition-all duration-300 hover:scale-105 group rounded-lg"
